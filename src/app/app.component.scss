@@ -1,0 +1,130 @@
+* {
+  font-family: "Pokemon";
+}
+#main-content {
+  height: 100vh;
+  background: url("https://orig00.deviantart.net/ea6e/f/2011/338/c/6/battle_background_help_1_by_faria4-d4i6gca.jpg")
+    no-repeat;
+  background-size: cover;
+}
+
+.battle {
+  width: 100%;
+}
+
+.battle-top {
+  height: 30vh;
+  margin-top: 15%;
+}
+
+.battle-bottom {
+  height: 30vh;
+  justify-content: flex-end;
+}
+.battle-bottom .char-photo {
+  justify-content: flex-end;
+}
+
+.char {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.char-photo {
+  justify-content: flex-end;
+}
+
+#char-1-photo {
+  transform: scaleX(-1);
+  width: 10em;
+  height: 10em;
+}
+#char-2-photo {
+  transform: scaleX(-1);
+  width: 10em;
+  height: 10em;
+}
+
+.char-info {
+  background-color: rgb(253, 250, 217);
+  border-radius: 15px 2px 15px 2px;
+  height: 30%;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 6px 6px 1px 1px #545e5d;
+  border: 1.5px rgb(37, 51, 28);
+  border-style: solid;
+}
+
+.char-name {
+}
+
+.char-life,
+#char-1-life,
+#char-2-life {
+  height: 15px;
+  border-radius: 10px;
+}
+.char-life {
+  width: 200px;
+  background-color: rgb(67, 71, 74);
+  border: 1.3px #25331c;
+  border-style: solid;
+}
+#char-1-life {
+  background-color: rgb(95, 226, 154);
+  width: 50%;
+}
+#char-2-life {
+  background-color: rgb(95, 226, 154);
+  width: 90%;
+}
+
+.char-attack {
+}
+#char-1-attack {
+}
+#char-2-attack {
+}
+
+.char-defense {
+}
+#char-1-defense {
+}
+#char-2-defense {
+}
+
+.control-panel {
+  height: 30%;
+  background: rgb(42, 73, 92);
+  border: rgb(205, 165, 76) 10px outset;
+  border-radius: 10px;
+  z-index: 900;
+}
+
+/*Hacks*/
+
+.display-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.flex-direction-row {
+  flex-direction: row;
+}
+
+.flex-direction-col {
+  flex-direction: column;
+}
+
+.flex-direction-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-direction-col-reverse {
+  flex-direction: column-reverse;
+}
