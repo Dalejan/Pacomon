@@ -1,130 +1,172 @@
 * {
-  font-family: "Pokemon";
+    font-family: "Pokemon";
+    html {
+      font-size: 1vw;
+    }
 }
+
 #main-content {
-  height: 100vh;
-  background: url("https://orig00.deviantart.net/ea6e/f/2011/338/c/6/battle_background_help_1_by_faria4-d4i6gca.jpg")
-    no-repeat;
-  background-size: cover;
+    height: 86.5%;
+    width: 57.5%;
+    top: 5%;
+    left: 21.6%;
+    background: transparent;
+    position: absolute;
+    border: solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-size: cover;
+    * {
+      z-index:2;
+    }
 }
 
 .battle {
-  width: 100%;
+    width: 100%;
+}
+.battle-background {
+  width:100%;
+  height:80%;
+  position: absolute;
+  z-index: 1;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.gameboy-background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .battle-top {
-  height: 30vh;
-  margin-top: 15%;
+    height: 30%;
+    margin-top: 5%;
+    justify-content: flex-end;
 }
 
 .battle-bottom {
-  height: 30vh;
-  justify-content: flex-end;
+    height: 30vh;
 }
+
 .battle-bottom .char-photo {
-  justify-content: flex-end;
+    justify-content: flex-end;
 }
 
 .char {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width:100%;
 }
-
+.char-top {
+  padding-right:22%;
+}
+.char-bottom {
+  padding-left: 15%;
+}
 .char-photo {
-  justify-content: flex-end;
+    justify-content: flex-end;
 }
 
 #char-1-photo {
-  transform: scaleX(-1);
-  width: 10em;
-  height: 10em;
+    width: 15em;
+    height: 15em;
+    margin-top:18vh;
 }
+
 #char-2-photo {
-  transform: scaleX(-1);
-  width: 10em;
-  height: 10em;
+    width: 15em;
+    height: 15em;
 }
 
 .char-info {
-  background-color: rgb(253, 250, 217);
-  border-radius: 15px 2px 15px 2px;
-  height: 30%;
-  margin: 20px;
-  padding: 20px;
-  box-shadow: 6px 6px 1px 1px #545e5d;
-  border: 1.5px rgb(37, 51, 28);
-  border-style: solid;
+    background-color: rgb(253, 250, 217);
+    border-radius: 15px 2px 15px 2px;
+    height: 15%;
+    margin: 20px;
+    padding: 20px;
+    width: 50%;
+    box-shadow: 6px 6px 1px 1px #545e5d;
+    border: 1.5px rgb(37, 51, 28);
+    border-style: solid;
 }
 
-.char-name {
-}
+.char-name {}
 
 .char-life,
 #char-1-life,
 #char-2-life {
-  height: 15px;
-  border-radius: 10px;
+    height: 15px;
+    border-radius: 10px;
 }
+
 .char-life {
-  width: 200px;
-  background-color: rgb(67, 71, 74);
-  border: 1.3px #25331c;
-  border-style: solid;
+    width: 70%;
+    background-color: rgb(67, 71, 74);
+    border: 1.3px #25331c;
+    border-style: solid;
 }
+
 #char-1-life {
-  background-color: rgb(95, 226, 154);
-  width: 50%;
+    background-color: rgb(95, 226, 154);
+    width: 50%;
 }
+
 #char-2-life {
-  background-color: rgb(95, 226, 154);
-  width: 90%;
+    background-color: rgb(95, 226, 154);
+    width: 90%;
 }
 
-.char-attack {
-}
-#char-1-attack {
-}
-#char-2-attack {
-}
+.char-attack {}
 
-.char-defense {
-}
-#char-1-defense {
-}
-#char-2-defense {
-}
+#char-1-attack {}
+
+#char-2-attack {}
+
+.char-defense {}
+
+#char-1-defense {}
+
+#char-2-defense {}
 
 .control-panel {
-  height: 30%;
-  background: rgb(42, 73, 92);
-  border: rgb(205, 165, 76) 10px outset;
-  border-radius: 10px;
-  z-index: 900;
+    height: 30%;
+    background: rgb(42, 73, 92);
+    border: rgb(205, 165, 76) 10px outset;
+    border-radius: 10px;
+    z-index: 900;
 }
 
 /*Hacks*/
 
 .display-flex {
-  display: flex;
+    display: flex;
 }
 
 .justify-content-center {
-  justify-content: center;
+    justify-content: center;
 }
 
 .flex-direction-row {
-  flex-direction: row;
+    flex-direction: row;
 }
 
 .flex-direction-col {
-  flex-direction: column;
+    flex-direction: column;
 }
 
 .flex-direction-row-reverse {
-  flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
 .flex-direction-col-reverse {
-  flex-direction: column-reverse;
+    flex-direction: column-reverse;
 }
