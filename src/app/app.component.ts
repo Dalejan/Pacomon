@@ -8,14 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   enemyPokemon = {
     name: 'Charizard',
-    hp: 100,
+    hp: 50,
     lvl: 100,
     tipos: ['Fuego', 'Volador'],
     sprite: '/src/assets/charizard.gif'
   };
   trainerPokemon = {
     name: 'Entei',
-    hp: 100,
+    hp: 20,
     lvl: 100,
     tipo1: ['Fuego'],
     sprite: 'https://vignette.wikia.nocookie.net/es.pokemon/images/f/fc/Entei_espalda_G5.gif/revision/latest?cb=20101227123557'
