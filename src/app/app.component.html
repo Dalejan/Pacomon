@@ -6,12 +6,12 @@
   <div class="battle battle-top display-flex">
     <div class="char flex-direction-row-reverse char-top">
       <div class="char-photo">
-        <img id="char-1-photo" src="https://vignette.wikia.nocookie.net/es.pokemon/images/8/80/Charizard_NB.gif/revision/latest?cb=20101031232142"
+        <img id="char-1-photo" [src]="enemyPokemon.sprite"
           alt="" srcset="">
       </div>
       <div class="char-info">
         <div id="char-1-name" class="char-name">
-          Charizard
+          {{enemyPokemon.name}}
         </div>
         <div class="char-life">
           <div id="char-1-life" appLifePoints="20"></div>
@@ -27,12 +27,12 @@
   <div class="battle battle-bottom display-flex" >
     <div class="char char-bottom  ">
       <div class="char-photo display-flex">
-        <img id="char-2-photo" src="https://vignette.wikia.nocookie.net/es.pokemon/images/f/fc/Entei_espalda_G5.gif/revision/latest?cb=20101227123557"
+        <img id="char-2-photo" [src]="trainerPokemon.sprite"
           alt="" srcset="">
       </div>
       <div class="char-info">
         <div id="char-2-name" class="char-name">
-          Entei
+        {{trainerPokemon.name}}
         </div>
         <div class="char-life">
           <div id="char-2-life" appLifePoints="50"></div>
@@ -52,3 +52,5 @@
   <img src="https://orig00.deviantart.net/1971/f/2013/203/a/a/console_series__gameboy_advanced_template_by_boogacatt-d6epdwp.png"
     alt="">
 </div>
+
+<audio src="/src/assets/Battle.mp3" loop autoplay></audio>
