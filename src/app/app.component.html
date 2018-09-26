@@ -14,7 +14,7 @@
           {{enemyPokemon.name}}
         </div>
         <div class="char-life">
-          <div id="char-1-life" appLifePoints="20"></div>
+          <div id="char-1-life" [appLifePoints]="enemyPokemon.hp"></div>
         </div>
         <div class="char-attack"></div>
         <div id="char-1-attack"></div>
@@ -35,7 +35,7 @@
         {{trainerPokemon.name}}
         </div>
         <div class="char-life">
-          <div id="char-2-life" appLifePoints="50"></div>
+          <div id="char-2-life" [appLifePoints]="trainerPokemon.hp"></div>
         </div>
         <div class="char-attack"></div>
         <div id="char-2-attack"></div>
