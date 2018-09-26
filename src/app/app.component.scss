@@ -77,14 +77,16 @@
 }
 
 #char-1-photo {
-    width: 15em;
-    height: 15em;
+    transform: scale(2.5,2.5);
+    max-height: 7em;
+    max-width:7em;
     margin-top:18vh;
 }
 
 #char-2-photo {
-    width: 15em;
-    height: 15em;
+    transform: scale(2.5,2.5);
+    max-height: 6em;
+    max-width:6em;
 }
 
 .char-info {
@@ -110,6 +112,7 @@
 
 .char-life {
     width: 70%;
+    margin-top:4px;
     background-color: rgb(67, 71, 74);
     border: 1.3px #25331c;
     border-style: solid;
