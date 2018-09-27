@@ -3,54 +3,15 @@
   <div class="battle-background">
     <img src="https://pbs.twimg.com/media/DVMT-6OXcAE2rZY.jpg" alt="">
   </div>
-  <div class="battle battle-top display-flex">
-    <div class="char flex-direction-row-reverse char-top">
-      <div class="char-photo">
-        <img id="char-1-photo" [src]="enemyPokemon.sprite"
-          alt="" srcset="">
-      </div>
-      <div class="char-info">
-        <div id="char-1-name" class="char-name">
-          {{enemyPokemon.name}}
-        </div>
-        <div class="char-life">
-          <div id="char-1-life" [appLifePoints]="enemyPokemon.hp"></div>
-        </div>
-        <div class="char-attack"></div>
-        <div id="char-1-attack"></div>
-        <div class="char-defense">
-          <div id="char-1-defense"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="battle battle-bottom display-flex" >
-    <div class="char char-bottom  ">
-      <div class="char-photo display-flex">
-        <img id="char-2-photo" [src]="trainerPokemon.sprite"
-          alt="" srcset="">
-      </div>
-      <div class="char-info">
-        <div id="char-2-name" class="char-name">
-        {{trainerPokemon.name}}
-        </div>
-        <div class="char-life">
-          <div id="char-2-life" [appLifePoints]="trainerPokemon.hp"></div>
-        </div>
-        <div class="char-attack"></div>
-        <div id="char-2-attack"></div>
-        <div class="char-defense">
-          <div id="char-2-defense"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-pokemon [pokemon]="enemyPokemon"></app-pokemon>
+  <app-pokemon [pokemon]="trainerPokemon" isTrainer="true"></app-pokemon>
+  
   <div class="control-panel"></div>
-
 </div>
+
+<!-- Ambience -->
 <div class="gameboy-background">
   <img src="https://orig00.deviantart.net/1971/f/2013/203/a/a/console_series__gameboy_advanced_template_by_boogacatt-d6epdwp.png"
     alt="">
 </div>
-
 <audio src="/src/assets/Battle.mp3" loop autoplay></audio>
