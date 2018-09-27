@@ -6,9 +6,10 @@ import { LifePointsDirective } from "../directives/life-points.directive";
 import { AngularFireModule } from "@angular/fire";
 import { environment } from "../environments/environment";
 import { PokemonComponent } from './components/pokemon/pokemon.component';
+import { ControlPanelComponent } from './components/control-panel/control-panel.component';
 
 @NgModule({
-  declarations: [AppComponent, LifePointsDirective, PokemonComponent],
+  declarations: [AppComponent, LifePointsDirective, PokemonComponent, ControlPanelComponent],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase)

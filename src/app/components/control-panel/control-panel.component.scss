@@ -1,0 +1,29 @@
+.battle-actions-container {
+  display: flex;
+  flex-flow: wrap;
+  background: wheat;
+  justify-content: space-around;
+  align-items: center;
+  border: 10px outset darkgray;
+  width: 50%;
+}
+
+.battle-dialog {
+  color: wheat;
+  padding: 20px;
+  width: 50%;
+}
+
+.battle-actions:hover {
+  cursor: pointer;
+}
+
+.battle-actions {
+  border: none;
+  transition: all 400ms ease-in;
+}
+
+.battle-actions[class*="active"] {
+  border: 2px black outset;
+  transition: all 400ms ease-out;
+}
