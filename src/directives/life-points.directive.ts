@@ -1,20 +1,16 @@
 import {
   Directive,
   ElementRef,
-  Input,
-  HostBinding,
-  OnInit,
-  OnChanges
+  Input
 } from "@angular/core";
 
 @Directive({
   selector: "[appLifePoints]"
 })
 export class LifePointsDirective {
-  @Input("appLifePoints")
-  appLifePoints: number;
+  @Input("appLifePoints") appLifePoints: number;
 
-  constructor(private el: ElementRef) {}
+  constructor(private el: ElementRef) { }
 
   ngOnChanges() {
     this.changeLife();

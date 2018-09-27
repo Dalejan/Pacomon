@@ -1,0 +1,55 @@
+.char {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 1rem;
+    .char-info {
+        background-color: rgb(253, 250, 217);
+        border-radius: 15px 2px 15px 2px;
+        height: 5em;
+        padding: 1em;
+        width: 50%;
+        box-shadow: 6px 6px 1px 1px #545e5d;
+        border: 1.5px rgb(37, 51, 28);
+        border-style: solid;
+    }
+    .char-life,
+    .char-life-fill {
+        height: 1rem;
+        border-radius: 10px;
+    }
+    .char-life {
+        width: 70%;
+        margin-top: 4px;
+        background-color: rgb(67, 71, 74);
+        border: 1.3px #25331c;
+        border-style: solid;
+    }
+}
+
+.char-top {
+    padding-right: 22%;
+    flex-direction: row-reverse;
+    background: 'red';
+    .char-photo {
+        img {
+            transform: scale(2.5, 2.5);
+            max-height: 7em;
+            max-width: 7em;
+            margin-top: 18vh;
+        }
+    }
+}
+
+.char-bottom {
+    padding-left: 15%;
+    .char-photo {
+        img {
+            transform: scale(2.5, 2.5);
+            max-height: 7em;
+            max-width: 7em;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<div  [className]="isTrainer? 'char-bottom char': 'char-top char'">
+  <div class="char-photo">
+    <img  [src]="pokemon.sprite" alt="" srcset="">
+  </div>
+  <div class="char-info">
+    <div  class="char-name">
+      {{pokemon.name}}
+    </div>
+    <div class="char-life">
+      <div class="char-life-fill" [appLifePoints]="pokemon.hp"></div>
+    </div>
+  </div>
+</div>
