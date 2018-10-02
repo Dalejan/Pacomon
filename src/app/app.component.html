@@ -6,7 +6,7 @@
   <app-pokemon [pokemon]="enemyPokemon"></app-pokemon>
   <app-pokemon [pokemon]="trainerPokemon" isTrainer="true"></app-pokemon>
 
-  <app-control-panel [pokemon]="trainerPokemon" isTrainer="true" class="control-panel"></app-control-panel>
+  <app-control-panel [pokemon]="trainerPokemon" isTrainer="true" class="control-panel" (evAttack)='Attack($event)'></app-control-panel>
 </div>
 
 <!-- Ambience -->
