@@ -19,6 +19,7 @@
     .char-life-fill {
         height: 1rem;
         border-radius: 10px;
+        transition: width 300ms ease-in-out;
     }
     .char-life {
         width: 70%;

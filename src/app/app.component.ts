@@ -1,12 +1,12 @@
-import { Component } from "@angular/core";
-import { AngularFireDatabase } from "@angular/fire/database";
-import { Observable } from "rxjs";
-import { Pokemon } from "../classes/pokemon";
+import { Component } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { Observable } from 'rxjs';
+import { Pokemon } from '../classes/pokemon';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"],
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
   providers: [AngularFireDatabase]
 })
 export class AppComponent {
@@ -15,19 +15,19 @@ export class AppComponent {
   trainerPokemon: Pokemon;
 
   constructor(db: AngularFireDatabase) {
-    this.pokemons = db.list("pokemons").valueChanges();
+    this.pokemons = db.list('pokemons').valueChanges();
   }
 
   ngOnInit() {
-    this.enemyPokemon = new Pokemon("", 1, 0, [""], "", "");
-    this.trainerPokemon = new Pokemon("", 1, 0, [""], "", "");
+    this.enemyPokemon = new Pokemon('', 1, 0, [''], '', '');
+    this.trainerPokemon = new Pokemon('', 1, 0, [''], '', '');
 
     this.pokemons.subscribe(Pokemons => {
       this.enemyPokemon.setAllData(
         Pokemons[0].name,
         Pokemons[0].hp,
         Pokemons[0].level,
-        "/src/assets/charizard.gif",
+        '/src/assets/charizard.gif',
         Pokemons[0].types,
         Pokemons[0].power
       );
@@ -43,9 +43,11 @@ export class AppComponent {
     });
   }
   Attack(event) {
-    console.log(event.pokemon.power);
     this.pokemons.subscribe(Pokemons => {
-      this.enemyPokemon.setHp(+this.enemyPokemon.getHp - event.pokemon.power);
+      this.enemyPokemon.setHp(+this.enemyPokemon.getHp() - +this.trainerPokemon.getPower());
+      setTimeout(gg => {
+        this.trainerPokemon.setHp(+this.trainerPokemon.getHp() - +this.enemyPokemon.getPower() );
+      }, 250);
     });
   }
 }
