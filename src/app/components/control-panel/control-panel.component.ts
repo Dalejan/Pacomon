@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { Pokemon } from "../../../classes/pokemon";
 @Component({
   selector: "app-control-panel",
@@ -10,11 +10,15 @@ export class ControlPanelComponent implements OnInit {
   pokemon: Pokemon;
   @Input()
   isTrainer: Boolean = false;
+
+  @Output()
+  evAttack = new EventEmitter();
   constructor() {}
 
   ngOnInit() {}
 
   atack() {
     console.log("gg wp que locha hacer esto xD");
+    this.evAttack.emit({ pokemon: this.pokemon });
   }
 }
