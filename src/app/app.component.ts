@@ -27,7 +27,7 @@ export class AppComponent {
         Pokemons[0].name,
         Pokemons[0].hp,
         Pokemons[0].level,
-        '/src/assets/charizard.gif',
+        '/assets/charizard.gif',
         Pokemons[0].types,
         Pokemons[0].power
       );
