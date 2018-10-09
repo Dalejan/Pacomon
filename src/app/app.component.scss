@@ -1,7 +1,8 @@
 * {
     font-family: "Pokemon";
 }
-
+$break-small: 850px;
+$break-large: 1200px;
 #main-content {
     height: 87%;
     width: 58%;
@@ -42,14 +43,15 @@
     }
 }
 
-
 .control-panel {
     height: 35%;
     background: rgb(42, 73, 92);
-    border: rgb(205, 165, 76) 10px outset;
+    border: rgb(205, 165, 76) 0.3rem outset;
     border-radius: 10px;
     z-index: 900;
-
+    @media screen and (max-width: $break-small) {
+        font-size:0.4rem;
+    }
     display: flex;
 }
 
